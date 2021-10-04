@@ -1,3 +1,24 @@
-header{
-    color: red;
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary;
+
+    img {
+        height: 50px;
+        padding: 5px 0 0 10px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        padding: 5px 10px 0 0;
+
+        li {
+            padding: 0 2.5px;
+        }
+    }
+
+    a:hover {
+        color: $tertiary;
+    }
 }

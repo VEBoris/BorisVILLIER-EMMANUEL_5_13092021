@@ -1,0 +1,12 @@
+footer {
+    background-color: $primary;
+
+    ul {
+        padding: 0;
+    }
+
+    a:hover {
+        color: $tertiary;
+        text-decoration: underline;
+    }
+}
