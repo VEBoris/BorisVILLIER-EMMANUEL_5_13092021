@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+}
+
+img {
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3e9f1;
+}
+header img {
+  height: 50px;
+  padding: 5px 0 0 10px;
+}
+header ul {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px 0 0;
+}
+header ul li {
+  padding: 0 2.5px;
+}
+header a:hover {
+  color: #905bf7;
+}
+
+footer {
+  background-color: #f3e9f1;
+}
+footer ul {
+  padding: 0;
+}
+footer a:hover {
+  color: #905bf7;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=main.css.map */

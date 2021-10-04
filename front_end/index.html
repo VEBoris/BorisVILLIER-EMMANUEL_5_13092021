@@ -4,29 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orinounours</title>
 
-    <link rel="stylesheet" href="../.css/main.css">
-    <script src="./src/main.js" type="module" defer></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 
-    <title>Orinoco</title>
+    <link rel="shortcut icon" href="./image/favicon.ico">
+
 </head>
 <body>
     <header>
-        <a href="">Accueil</a>
-        <a href="">Produits</a>
-        <a href="">Panier</a>
+        <a href="./index.html"><img src="./image/logo.png" alt="logo Orinoco"></a>
+        <h1 class="nav__logo">Orinounours</h1>
+        <ul class="nav">
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="./cart.html">Panier</a></li>
+        </ul>
     </header>
-
     <main>
-        
+        <div class="products-container">
+            <h3 class="title">Nos produits</h3>
+            <div class="products">
+                
+            </div>
+        </div>
     </main>
-
     <footer>
-        <ul>
-        <li><a href="">A propos de nous</a></li>
-        <li><a href="">Mentions légales</a></li>
-        <li><a href="mailto:mail@ohmyfood.com">Contact</a></li>
+        <ul class="nav">
+            <li><a href="mailto:mail@orinoco.com" class="nav__link">Contact</a></li>
+            <li><a href="" class="nav__link">Mentions légales</a></li>
         </ul>
     </footer>
+    
+    <script src="src/home.js" type="module"></script>
+
 </body>
 </html>
