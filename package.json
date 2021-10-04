@@ -4,13 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-   
-    "sass": "sass --watch ../front_end/sass/main.scss:../.css/main.css"
+    "sass": "sass --watch ./front_end/sass/main.scss:./front_end/css/main.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "nodemon": "^2.0.13",
     "uuid": "^3.3.2"
   }
 }
