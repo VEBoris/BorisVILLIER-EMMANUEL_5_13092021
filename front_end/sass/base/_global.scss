@@ -1,9 +1,15 @@
+@font-face {
+    font-family: "belligerent";
+    src: url(../../fonts/web_fonts/belligerentmadness_regular_macroman/belligerent-webfont.woff) format("woff");
+}
+
 * {
     box-sizing: border-box;
 }
 
-body {
+.full {
     font-size: 15px;
+    font-family: "belligerent";
 }
 
 img {
@@ -14,7 +20,7 @@ ul {
     list-style: none;
 }
 
-a {
+.nav__link {
     text-decoration: none;
     color: black;
 }

@@ -13,24 +13,24 @@ function getArticles() {
     .catch((error) => {
       const productsContainer = document.querySelector(".products-container");
       productsContainer.innerHTML =
-        "Nous n'avons pas réussi à afficher nos nounours. Avez vous bien lancé le serveur local (Port 3000) ? <br>Si le problème persiste, contactez-nous.";
+        "Une erreur s'est produite. Avez vous bien lancé le serveur local (Port 3000) ?";
       productsContainer.style.textAlign = "center";
       productsContainer.style.padding = "30vh 0";
     })
 
-    // Dispatcher les données de chaque produit (prix, nom...) dans le DOM
+    // Distribuer chaque produit dans le DOM
     .then(function (resultatAPI) {
-      const articles = resultatAPI;
-      console.log(articles);
-      for (const article in articles) {
-        const productCard = document.createElement("div");
-        document.querySelector(".products").appendChild(productCard);
+      const teddyBears = resultatAPI;
+      console.log(teddyBears);
+      for (const article in teddyBears) {
+        const productCard = document.createElement("article");
+        document.querySelector(".teddy_bears").appendChild(productCard);
         productCard.classList.add("product");
 
         const productLink = document.createElement("a");
         productCard.appendChild(productLink);
         productLink.href = `product.html?id=${resultatAPI[article]._id}`;
-        productLink.classList.add("stretched-link");
+        productLink.classList.add("bears_link");
 
         const productImgDiv = document.createElement("div");
         productLink.appendChild(productImgDiv);
