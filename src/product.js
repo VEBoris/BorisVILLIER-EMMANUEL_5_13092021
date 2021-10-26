@@ -1,7 +1,7 @@
 let params = new URL(document.location).searchParams;
 let id = params.get("id");
 
-const productCardImg = document.querySelector(".img");
+const productCardImg = document.querySelector(".bears_pictures");
 const productCardName = document.querySelector(".product-card__infos__title");
 const productCardDescription = document.querySelector(
   ".product-card__infos__description"
@@ -103,11 +103,10 @@ function addToCart() {
       setTimeout("location.reload(true);", 4000);
     } else {
       confirmation.style.visibility = "visible";
-      textConfirmation.style.background = "red";
-      textConfirmation.style.border = "red";
-      textConfirmation.style.color = "white";
+      textConfirmation.style.color = "red";
       textConfirmation.style.whiteSpace = "normal";
-      textConfirmation.innerText = `La quantité doit être comprise entre 1 et 99,.`;
+      textConfirmation.innerText = `! La quantité doit être comprise entre 1 et 99,.`;
     }
   });
 }
+
