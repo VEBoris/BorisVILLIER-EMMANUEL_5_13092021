@@ -1,0 +1,14 @@
+//fonts-family//
+@font-face {
+    font-family: "belligerent";
+    src: url(../fonts/web_fonts/belligerentmadness_regular_macroman/belligerent-webfont.woff) format("woff");
+  }
+
+//global//
+@import"./base/global";
+
+//utils//
+@import"./utils/variables";
+
+//layout//
+@import"./layout/header", "./layout/home", "./layout/product", "./layout/footer";

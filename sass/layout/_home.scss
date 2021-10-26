@@ -10,29 +10,43 @@
     flex-direction: column;
     padding: 30px 0;
 
+    h1 {
+        font-size: 50px;
+        padding-bottom: 10px;
+    }
+
     .precis {
-        margin: 0;
+        text-align: center;
     }
 }
 
-.teddy_bears {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    row-gap: 55px;
-    padding: 45px 0;
+section {
+    h2 {
+        font-size: 35px;
+        padding-top: 25px;
+    }
+
+    .teddy_bears {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 55px;
+        padding: 45px 0;
+    }
 }
+
+
 
 .product {
     width: 350px;
     border-radius: 50px;
-    background-color: #56baffa1;
+    background-color: $blb;
     font-weight: 600;
 
     &:hover {
          .bears_link {
-            color: $tertiary;
-
+            color: darken($tertiary, $amount: 20);
+            
         }
     }
 
@@ -58,7 +72,7 @@
         justify-content: space-between;
         border-bottom-left-radius: 50px;
         border-bottom-right-radius: 50px;
-        height: 45px;
+        height: 65px;
         padding-top: 12px;
 
         &__title {
@@ -71,8 +85,8 @@
     }
 }
 
-.cart-card__recap__row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
+// .cart-card__recap__row {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-around;
+// }

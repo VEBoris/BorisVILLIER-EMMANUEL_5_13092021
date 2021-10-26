@@ -1,0 +1,72 @@
+main {
+    .product-card__img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+
+        .bears_pictures {
+            width: 500px;
+        }
+    }
+
+    .product-card__infos {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px 370px;
+
+        &__title {
+            @extend .product-card__infos__description;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        &__description {
+            margin: 10px 0;
+        }
+
+        &__price {
+            @extend .product-card__infos__description;
+            font-weight: 600;
+        }
+
+        &__quantity {
+            @extend .product-card__infos__description;
+
+            input {
+                width: 50px;
+            }
+        }
+
+        &__color {
+            @extend .product-card__infos__description;
+            
+            select {
+                width: 85px;
+            }
+        }
+
+        &__buttons {
+            width: 250px;
+
+            a {
+                color: darken($blb, $amount: 25);
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            a:hover {
+                text-decoration: none;
+                color: $tertiary;
+            }
+
+            button {
+                margin: 20px 0;
+
+            }
+        }
+    }
+}
