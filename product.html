@@ -5,32 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!--CSS-->
+    <!--CSS-->
      
-     <link rel="stylesheet" href="css/main.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="./image/favicon.ico">
 
     <title></title>
 </head>
 <body>
+    <div class="full">
     <header>
-        <div class="container-fluid">
-            <div class="header-container">
-                <div class="nav">
-                    <a href="index.html"><h1 class="nav__logo">ORINOUNOURS</h1></a>
-                    <a href="cart.html"><div class="nav__cart">
-                        <i class="fas fa-shopping-cart"></i>
-                        </div>
-                    </a>
-                    </div>
-            </div>
+        <div class="container navbar">
+            <a href="./index.html"><img src="./image/logo.png" alt="logo Orinoco" class="logo"></a>
+            <ul>
+                <li><a href="./index.html" class="nav__link">Accueil</a></li>
+                <li><a href="./cart.html" class="nav__link">Panier</a></li>
+            </ul>
         </div>
     </header>
     <main>
         <div class="container">
             <div class="product-card">
                 <div class="product-card__img">
-                    <img src="" alt="" class="img">
+                    <img src="" alt="" class="bears_pictures">
                 </div>
                 <div class="product-card__infos">
                     <div class="product-card__infos__title"></div>
@@ -54,24 +54,25 @@
                                 Revenir aux peluches
                             </div>
                         </a>
-                        <a href="#">
-                            <div class="product-card__infos__button add-to-cart">
-                                Ajouter au panier
-                            </div>
-                        </a>
+                        <button><div class="product-card__infos__button add-to-cart">
+                            Ajouter au panier
+                        </div></button>
                     </div>
                 </div>
             </div>
         </div>
     </main>
     <footer>
-        <div class="nav">
-            <a href="" class="nav__link">Contact</a>
-            <a href="" class="nav__link">Mentions légales</a>
+        <div class="container">
+            <ul>
+                <li><a href="mailto:mail@orinoco.com" class="nav__link">Contact</a></li>
+                <li><a href="" class="nav__link">Mentions légales</a></li>
+                <li><a href="" class="nav__link">À propos</a></li>
+            </ul>
         </div>
     </footer>
+    </div>
 
-  
     <script src="src/product.js" type="module"></script>
 </body>
 </html>
