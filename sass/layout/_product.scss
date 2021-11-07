@@ -7,6 +7,10 @@ main {
 
         .bears_pictures {
             width: 500px;
+
+            @media all and (max-width: 767px){
+                width: 300px;
+            }
         }
     }
 
@@ -17,6 +21,10 @@ main {
         align-items: center;
         text-align: center;
         margin: 10px 370px;
+
+        @media all and (max-width: 1439px){
+            margin: 0;
+        }
 
         &__title {
             @extend .product-card__infos__description;
@@ -37,7 +45,7 @@ main {
             @extend .product-card__infos__description;
 
             input {
-                width: 50px;
+                width: 70px;
             }
         }
 
@@ -45,7 +53,7 @@ main {
             @extend .product-card__infos__description;
             
             select {
-                width: 85px;
+                width: 150px;
             }
         }
 

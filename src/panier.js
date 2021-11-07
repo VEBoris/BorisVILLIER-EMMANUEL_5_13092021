@@ -1,48 +1,48 @@
-let cart = document.querySelector(".cart-card__recap");
+let panier = document.querySelector(".panier-card__recap");
 let copyOfLS = JSON.parse(localStorage.getItem("products"));
 
 main();
 
 function main() {
-  displayCart();
-  countTotalInCart();
-  toEmptyCart();
+  displayPanier();
+  countTotalInPanier();
+  toEmptyPanier();
   checkFormAndPostRequest();
 }
 
-function displayCart() {
-  let test = document.querySelector(".width-to-empty-cart");
-  let cartCard = document.querySelector(".cart-card");
-  let emptyCart = document.querySelector(".if-empty-cart");
+function displayPanier() {
+  let test = document.querySelector(".width-to-empty-panier");
+  let panierCard = document.querySelector(".panier-card");
+  let emptyPanier = document.querySelector(".if-empty-panier");
 
   // Si le tableau copié du localStorage contient au moins un objet, on affiche le panier et on supprime le message d'erreur.
   if (localStorage.getItem("products")) {
-    cartCard.style.display = "flex";
-    cartCard.style.flexDirection = "column";
-    cartCard.style.justifyContent = "space-around";
-    emptyCart.style.display = "none";
+    panierCard.style.display = "flex";
+    panierCard.style.flexDirection = "column";
+    panierCard.style.justifyContent = "space-around";
+    emptyPanier.style.display = "none";
   }
 
   // Pour chaque objet dans le tableau copié du localStorage, on crée les divs de l'affichage du panier et on les remplit avec les données du tableau.
   for (let produit in copyOfLS) {
     let productRow = document.createElement("div");
-    cart.insertBefore(productRow, test);
-    productRow.classList.add("cart-card__recap__row", "product-row");
+    panier.insertBefore(productRow, test);
+    productRow.classList.add("panier-card__recap__row", "product-row");
 
     let productName = document.createElement("div");
     productRow.appendChild(productName);
-    productName.classList.add("cart-card__recap__title");
+    productName.classList.add("panier-card__recap__title");
     productName.innerHTML = copyOfLS[produit].name;
 
     let productQuantity = document.createElement("div");
     productRow.appendChild(productQuantity);
-    productQuantity.classList.add("cart-card__recap__title", "title-quantity");
+    productQuantity.classList.add("panier-card__recap__title", "title-quantity");
     productQuantity.innerHTML = copyOfLS[produit].quantity;
 
     let productPrice = document.createElement("div");
     productRow.appendChild(productPrice);
     productPrice.classList.add(
-      "cart-card__recap__title",
+      "panier-card__recap__title",
       "data-price",
       "price"
     );
@@ -55,7 +55,7 @@ function displayCart() {
   }
 }
 
-function countTotalInCart() {
+function countTotalInPanier() {
   let arrayOfPrice = [];
   let totalPrice = document.querySelector(".total");
 
@@ -87,11 +87,11 @@ function countTotalInCart() {
   ).format(arrayOfPrice))}`;
 }
 
-function toEmptyCart() {
+function toEmptyPanier() {
 
   // Lorsque qu'on clique sur le bouton, le panier se vide ainsi que le localStorage
-  const buttonToEmptyCart = document.querySelector(".to-empty-cart");
-  buttonToEmptyCart.addEventListener("click", () => {
+  const buttonToEmptyPanier = document.querySelector(".to-empty-panier");
+  buttonToEmptyPanier.addEventListener("click", () => {
     localStorage.clear();
   });
 }
@@ -100,14 +100,14 @@ function checkFormAndPostRequest() {
 
   // On récupère les inputs depuis le DOM.
   const submit = document.querySelector("#submit");
-  let inputName = document.querySelector("#name");
-  let inputLastName = document.querySelector("#lastname");
-  let inputPostal = document.querySelector("#postal");
-  let inputCity = document.querySelector("#city");
-  let inputAdress = document.querySelector("#adress");
-  let inputMail = document.querySelector("#mail");
-  let inputPhone = document.querySelector("#phone");
-  let erreur = document.querySelector(".erreur");
+  const inputName = document.querySelector("#name");
+  const inputLastName = document.querySelector("#lastname");
+  const inputPostal = document.querySelector("#postal");
+  const inputCity = document.querySelector("#city");
+  const inputAdress = document.querySelector("#adress");
+  const inputMail = document.querySelector("#mail");
+  const inputPhone = document.querySelector("#phone");
+  const erreur = document.querySelector(".erreur");
 
   // Lors d'un clic, si l'un des champs n'est pas rempli, on affiche une erreur, on empêche l'envoi du formulaire. On vérifie aussi que le numéro est un nombre, sinon même chose.
   submit.addEventListener("click", (e) => {

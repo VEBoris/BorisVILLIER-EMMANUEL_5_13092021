@@ -27,6 +27,12 @@ ul {
 header {
   background-color: #f3e9f1;
 }
+@media all and (max-width: 441px) {
+  header {
+    display: flex;
+    justify-content: center;
+  }
+}
 header .logo {
   height: 100px;
   padding: 5px 0 0 10px;
@@ -68,6 +74,12 @@ section h2 {
   font-size: 35px;
   padding-top: 25px;
 }
+@media all and (max-width: 767px) {
+  section h2 {
+    display: flex;
+    justify-content: center;
+  }
+}
 section .teddy_bears {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -75,12 +87,32 @@ section .teddy_bears {
   row-gap: 55px;
   padding: 45px 0;
 }
+@media all and (max-width: 767px) {
+  section .teddy_bears {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1439px) {
+  section .teddy_bears {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 20px;
+  }
+}
 
 .product {
   width: 350px;
   border-radius: 50px;
   background-color: #56baffa1;
   font-weight: 600;
+}
+@media all and (max-width: 767px) {
+  .product {
+    width: 295px;
+  }
 }
 .product:hover .bears_link {
   color: #540be1;
@@ -92,11 +124,21 @@ section .teddy_bears {
 .product__img {
   width: 350px;
 }
+@media all and (max-width: 767px) {
+  .product__img {
+    width: 295px;
+  }
+}
 .product__img img {
   height: 300px;
   width: 350px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+}
+@media all and (max-width: 767px) {
+  .product__img img {
+    width: 295px;
+  }
 }
 .product__infos {
   width: 350px;
@@ -107,11 +149,28 @@ section .teddy_bears {
   height: 65px;
   padding-top: 12px;
 }
+@media all and (max-width: 767px) {
+  .product__infos {
+    width: 295px;
+  }
+}
 .product__infos__title {
   padding-left: 25px;
 }
+@media all and (max-width: 767px) {
+  .product__infos__title {
+    font-size: 20px;
+    padding-top: 8px;
+  }
+}
 .product__infos__price {
   padding-right: 25px;
+}
+@media all and (max-width: 767px) {
+  .product__infos__price {
+    font-size: 20px;
+    padding-top: 8px;
+  }
 }
 
 main .product-card__img {
@@ -123,6 +182,11 @@ main .product-card__img {
 main .product-card__img .bears_pictures {
   width: 500px;
 }
+@media all and (max-width: 767px) {
+  main .product-card__img .bears_pictures {
+    width: 300px;
+  }
+}
 main .product-card__infos {
   display: flex;
   justify-content: center;
@@ -130,6 +194,11 @@ main .product-card__infos {
   align-items: center;
   text-align: center;
   margin: 10px 370px;
+}
+@media all and (max-width: 1439px) {
+  main .product-card__infos {
+    margin: 0;
+  }
 }
 main .product-card__infos__title {
   font-size: 32px;
@@ -142,10 +211,10 @@ main .product-card__infos__price {
   font-weight: 600;
 }
 main .product-card__infos__quantity input {
-  width: 50px;
+  width: 70px;
 }
 main .product-card__infos__color select {
-  width: 85px;
+  width: 150px;
 }
 main .product-card__infos__buttons {
   width: 250px;
@@ -163,6 +232,77 @@ main .product-card__infos__buttons button {
   margin: 20px 0;
 }
 
+.panier-card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+}
+.panier-card h2 {
+  display: flex;
+  justify-content: center;
+}
+.panier-card__recap a {
+  color: #905bf7;
+  text-decoration: none;
+}
+.panier-card__recap a:hover {
+  color: #905bf7;
+  text-decoration: underline;
+}
+.panier-card__recap__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.panier-card__recap__title {
+  padding: 5px 15%;
+}
+@media all and (max-width: 650px) {
+  .panier-card__recap__title {
+    padding: 5px 7%;
+  }
+}
+.panier-card__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.panier-card__form .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.panier-card__form h2 {
+  display: flex;
+  justify-content: center;
+}
+.panier-card__form form {
+  width: 26%;
+}
+@media all and (max-width: 767px) {
+  .panier-card__form form {
+    width: 63%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .panier-card__form form {
+    width: 36%;
+  }
+}
+.panier-card__form button {
+  margin-top: 10px;
+  background-color: #56baffa1;
+}
+
+.if-empty-panier a {
+  color: red;
+  text-decoration: none;
+}
+.if-empty-panier a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
 footer {
   background-color: #f3e9f1;
   padding: 10px 0;
@@ -172,6 +312,11 @@ footer ul {
   flex-direction: row;
   padding-top: 5px;
   justify-content: center;
+}
+@media all and (max-width: 767px) {
+  footer ul {
+    flex-direction: column;
+  }
 }
 footer ul li {
   padding: 0 15px;

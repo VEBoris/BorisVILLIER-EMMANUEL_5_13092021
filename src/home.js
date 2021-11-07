@@ -1,11 +1,11 @@
 main();
 
 function main() {
-  getArticles();
+  getBears();
 }
 
 // Récupérer les articles depuis l'API
-function getArticles() {
+function getBears() {
   fetch("http://localhost:3000/api/teddies")
     .then(function (res) {
       return res.json();

@@ -1,0 +1,84 @@
+.panier-card {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+
+    h2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__recap {
+
+        a {
+            color: $tertiary;
+            text-decoration: none;
+
+            &:hover {
+                color: $tertiary;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__recap__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    &__recap__title {
+        padding: 5px 15%;
+
+        @media all and (max-width: 650px){
+            padding: 5px 7%;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2 {
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            width: 26%;
+
+            @media all and (max-width: 767px){
+                width: 63%;
+            }
+
+            @media all and (min-width: 768px) and (max-width: 991px){
+                width: 36%;
+            }
+        }
+
+        button {
+            margin-top: 10px;
+            background-color: $blb;
+        }
+    }
+}
+
+.if-empty-panier {
+
+    a {
+        color: red;
+        text-decoration: none;
+
+        &:hover {
+            color: red;
+            text-decoration: underline;
+        }
+    }
+}

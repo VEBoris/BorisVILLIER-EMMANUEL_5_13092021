@@ -24,6 +24,11 @@ section {
     h2 {
         font-size: 35px;
         padding-top: 25px;
+
+        @media all and (max-width: 767px){
+            display: flex;
+            justify-content: center;
+        }
     }
 
     .teddy_bears {
@@ -32,6 +37,19 @@ section {
         grid-template-rows: repeat(2, 1fr);
         row-gap: 55px;
         padding: 45px 0;
+
+        @media all and (max-width: 767px) {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            justify-items: center;
+        }
+
+        @media all and (min-width: 768px) and (max-width: 1439px){
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 20px;
+        }
     }
 }
 
@@ -43,10 +61,13 @@ section {
     background-color: $blb;
     font-weight: 600;
 
+    @media all and (max-width: 767px){
+        width: 295px;
+    }
+
     &:hover {
          .bears_link {
             color: darken($tertiary, $amount: 20);
-            
         }
     }
 
@@ -58,11 +79,19 @@ section {
     &__img {
         width: 350px;
 
+        @media all and (max-width: 767px){
+            width: 295px;
+        }
+
         img {
             height: 300px;
             width: 350px;
             border-top-left-radius: 50px;
             border-top-right-radius: 50px;
+
+            @media all and (max-width: 767px){
+                width: 295px;
+            }
         }
     }
 
@@ -75,18 +104,26 @@ section {
         height: 65px;
         padding-top: 12px;
 
+        @media all and (max-width: 767px){
+            width: 295px;
+        }
+
         &__title {
             padding-left: 25px;
+
+            @media all and (max-width: 767px){
+                font-size: 20px;
+                padding-top: 8px;
+            }
         }
 
         &__price {
             padding-right: 25px;
+
+            @media all and (max-width: 767px){
+                font-size: 20px;
+                padding-top: 8px;
+            }
         }
     }
 }
-
-// .cart-card__recap__row {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-around;
-// }
