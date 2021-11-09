@@ -121,6 +121,9 @@ function checkFormAndPostRequest() {
       !inputPhone.value
     ) {
       erreur.innerHTML = "Vous devez renseigner tous les champs !";
+      erreur.style.visibility = "visible";
+      erreur.style.color = "red";
+      erreur.style.whiteSpace = "normal";
       e.preventDefault();
     } else if (isNaN(inputPhone.value)) {
       e.preventDefault();
@@ -156,15 +159,15 @@ function checkFormAndPostRequest() {
 
       // Envoie de la requête avec l'en-tête. On changera de page avec un localStorage qui ne contiendra plus que l'order id et le prix.
       fetch("http://localhost:3000/api/teddies/order", options)
-        .then((response) => response.json())
-        .then((data) => {
+      .then(async (response) => {
+        const dataResponse = await response.json();
           localStorage.clear();
           console.log(data)
-          localStorage.setItem("orderId", data.orderId);
+          localStorage.setItem("orderId", dataResponse.orderId);
           localStorage.setItem("total", priceConfirmation[1]);
 
           //  On peut commenter cette ligne pour vérifier le statut 201 de la requête fetch. Le fait de préciser la destination du lien ici et non dans la balise <a> du HTML permet d'avoir le temps de placer les éléments comme l'orderId dans le localStorage avant le changement de page.
-           document.location.href = "confirmation.html";
+           window.location = "confirmation.html";
         })
         .catch((err) => {
           alert("Il y a eu une erreur : " + err);
