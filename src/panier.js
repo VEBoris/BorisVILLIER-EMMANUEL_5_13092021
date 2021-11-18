@@ -167,7 +167,7 @@ function checkFormAndPostRequest() {
           localStorage.setItem("total", priceConfirmation[1]);
 
           //  On peut commenter cette ligne pour vérifier le statut 201 de la requête fetch. Le fait de préciser la destination du lien ici et non dans la balise <a> du HTML permet d'avoir le temps de placer les éléments comme l'orderId dans le localStorage avant le changement de page.
-           window.location = "confirmation.html";
+          document.location.href = "confirmation.html";
         })
         .catch((err) => {
           alert("Il y a eu une erreur : " + err);
