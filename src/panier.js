@@ -134,7 +134,7 @@ function checkFormAndPostRequest() {
       let productsBought = [];
       productsBought.push(copyOfLS);
 
-      const order = {
+      const info = {
         contact: {
           firstName: inputName.value,
           lastName: inputLastName.value,
@@ -149,7 +149,7 @@ function checkFormAndPostRequest() {
       // Création de l'entête de la requête
       const options = {
         method: "POST",
-        body: JSON.stringify(order),
+        body: JSON.stringify(info),
         headers: { "Content-Type": "application/json" },
       };
 
@@ -159,8 +159,8 @@ function checkFormAndPostRequest() {
 
       // Envoie de la requête avec l'en-tête. On changera de page avec un localStorage qui ne contiendra plus que l'order id et le prix.
       fetch("http://localhost:3000/api/teddies/order", options)
-      .then(async (response) => {
-        const dataResponse = await response.json();
+      .then((response) => {
+        const dataResponse = response.json();
           localStorage.clear();
           console.log(data)
           localStorage.setItem("orderId", dataResponse.orderId);
